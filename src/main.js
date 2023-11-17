@@ -6,6 +6,7 @@ import Overview from './components/Overview.vue'
 
 import './assets/main.css'
 
+
 const routes = [
     { path: '/', component: Login },
     { path: '/overview/:user', component: Overview, name: 'overview' }

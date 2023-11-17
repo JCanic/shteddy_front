@@ -54,6 +54,9 @@ const onSubmit = async () => {
   try {
     const response = await axios.post('http://localhost:8080/api/login', form.value)
     if (response.data && response.data.username) {
+      localStorage.setItem('userId', response.data.id);
+      localStorage.setItem('userName', response.data.username);
+      localStorage.setItem('accountId', response.data.accountId);
       router.push({
         name: 'overview',
         params: { user: response.data }
