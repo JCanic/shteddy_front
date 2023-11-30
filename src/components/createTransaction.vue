@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <h3>Add New Transaction</h3>
+  <div class = "form-container">
+    <h3 style = "color:black">Add New Transaction</h3>
     <form @submit.prevent="submitTransaction">
       <div class="form-group">
         <label for="date">Date:</label>
@@ -101,3 +101,52 @@ onMounted(() => {
 });
 
 </script>
+
+<style scoped>
+
+.form-container {
+  background-color: #f9f9f9; /* Light grey background */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  padding: 20px; /* Spacing inside the container */
+  max-width: 400px; /* Maximum width of the form */
+  margin: auto; /* Center the form on the page */
+}
+
+.form-group {
+  margin-bottom: 15px; /* Space between form groups */
+}
+
+label {
+  display: block;
+  margin-bottom: 5px; /* Small space between label and input */
+  color: #333; /* Dark grey color for text */
+  font-size: 16px; /* Readable font size */
+}
+
+input[type="text"],
+input[type="number"],
+select {
+  width: 100%; /* Full width */
+  padding: 10px; /* Padding inside the inputs */
+  border: 1px solid #ddd; /* Light grey border */
+  border-radius: 4px; /* Slightly rounded corners */
+  font-size: 16px; /* Matching font size */
+}
+
+button {
+  background-color: #5cb85c; /* Bootstrap's btn-success color */
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #4cae4c; /* A shade darker on hover */
+}
+
+
+</style>
